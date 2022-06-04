@@ -160,16 +160,4 @@ class NowPayments:
             data["cancel_url"] = cancel_url
         
         return await self._make_request("post", "invoice", data=data)
-
-
-async def main():
-    payments = NowPayments("your api_key")
-    status = await payments.get_status()
-    print(status)
-
-
-if __name__ == "__main__":
-    import asyncio
-    asyncio.run(main())
-    
-    
+        
